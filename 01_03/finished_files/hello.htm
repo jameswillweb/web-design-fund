@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Exploring HTML</title>
+<style>
+body {
+	color: red;
+}
+h1 {
+	font-family: Arial, sans-serif;
+	font-size: 32px;
+	color: black;
+}
+</style>
+</head>
+<body>
+<h1>My first web page</h1>
+<p>This is my first web page, it's a little basic, but it's helping me understand how HTML works and how to markup my content.</p>
+<button id="color">Change color!</button>
+<script>
+    document.getElementById('color').onclick = changeColor;  
+	var currentColor = "red"; 
+
+    function changeColor() {
+		if(currentColor == "red"){
+        document.body.style.color = "green";
+		currentColor = "green";
+		} else {
+		document.body.style.color = "red";
+		currentColor = "red";
+		}
+        return currentColor;
+    }   
+</script>
+</body>
+</html>
